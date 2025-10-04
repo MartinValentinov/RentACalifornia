@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПАРКИНГ</title>
+    <title>Embedded Google Map</title>
+    <link rel = "stylesheet" href = "styles.css">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+        <!-- HEADER -->
+        <a class = "contacts">
+            <button>КОНТАКТИ</button>
+          </a>
+          <a class = "reserve">
+            <button>РЕЗЕРВАЦИИ</button>
+          </a>
+          <a class = "parking">
+            <button>ПАРКИНГ</button>
+          </a>
+          <a class = "how-to">
+            <button>КАК ДА НАЕМА</button>
+          </a>
+          <a class = "prices">
+            <button>ПЛАНОВЕ И ЦЕНИ</button>
+          </a>
+      
+          <div class = "logo-d">
+            <a href = "#">
+              <img src = "logo.png" class = "logo">
+            </a>
+          </div>
+          <!-- HEADER END-->
+
+    <p class = "parking-camper">ПАРКИНГ НА КЕМПЕРИТЕ</p>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.9306840493057!2d23.36714497616988!3d42.641307679944314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85909deee329%3A0xa516d2df3a3c098b!2sGorublyane%2C%20Okolovrasten%20pat%20353%2C%201138%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2sus!4v1692101352247!5m2!1sen!2sus" 
+            width="600" 
+            height="450"
+            style="border:0; margin-left: 100px; margin-top: 10px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <!-- TEXT -->
+    <p class = "parking-address">АДРЕС НА ПАРКИНГА</p>
+    <p class = "address" onclick="window.open('https://www.google.com/maps/place/Camp+Park+Темуджин/@42.6209919,23.4199715,17.3z/data=!4m6!3m5!1s0x40aa8718a8f4a6f5:0xf4e5849fc2678071!8m2!3d42.6219819!4d23.4222997!16s%2Fg%2F11v3v9c_mk?hl=en&entry=ttu', '_blank');"><i class="fas fa-map-marker-alt"></i> гр. София, "Околовръстен път" 353, 1138</p>
+    <p class = "where">КАК ДА НИ НАМЕРИТЕ?</p>
+    <p class = "where-text">
+        Адресът е паркинг за кемпери на име <br>
+        "Темуджин", където след уговорена <br>
+        среща ще намерите нас и кемперите. <br>
+        Когато стигнете, моля звъннете, <br>
+        за да Ви отворим.
+    </p>
+    <!-- END OF TEXT-->
+    <div class="image-container">
+        <img src="viber_image_2024-08-15_12-55-26-225.jpg" alt="Camp Park Temudzhin" class="enlargeable-image">
+    </div>
+
+    <div class="overlay" id="overlay">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img src="viber_image_2024-08-15_12-55-26-225.jpg" alt="Camp Park Temudzhin" class="enlarged-image">
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

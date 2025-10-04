@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Booking</title>
+</head>
+<body>
+    <h1>Confirm Your Booking</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to confirm this booking?</p>
+        <button type="submit">Confirm Booking</button>
+    </form>
+    <a href="{% url 'home' %}">Cancel</a>
+</body>
+</html>

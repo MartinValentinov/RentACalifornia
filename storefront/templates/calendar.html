@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ calendar_type|title }} Calendar</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'calendar.css' %}">
+</head>
+<body>
+    <div class="background">
+        <div class="bg-cal">
+            <div class="nav">
+                {% if display_year <= current_year %}
+                    <a class="nav-controls disabled"> &lt; Prev </a>
+                {% else %}
+                    {% with prev_year=display_year|add:"-1" %}
+                        <a class="nav-controls" href="{% url 'calendar' calendar_type prev_year display_month %}">&lt; Prev</a>
+                    {% endwith %}
+                {% endif %}
+            
+                <span class="nav-number">{{ calendar_type|title }} - {{ display_year }}</span>
+            
+                {% with next_year=display_year|add:"1" %}
+                    <a class="nav-controls" href="{% url 'calendar' calendar_type next_year display_month %}">Next &gt;</a>
+                {% endwith %}
+            </div>
+
+            <div class="content">
+                <div id="months" class="months">
+                    <div class="month-only">
+                        <div class="month jan">January</div>
+                        <div class="month feb">February</div>
+                        <div class="month mar">March</div>
+                        <div class="month apr">April</div>
+                        <div class="month may">May</div>
+                        <div class="month june">June</div>
+                        <div class="month july">July</div>
+                        <div class="month aug">August</div>
+                        <div class="month sep">September</div>
+                        <div class="month oct">October</div>
+                        <div class="month nov">November</div>
+                        <div class="month dec">December</div>
+                    </div>
+                </div>
+
+                <div class="calendar-container">
+                    <div class="underline"></div>
+                    <div class="week-days">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar">
+                        {% for week in calendar %}
+                            {% for day in week %}
+                                {% if day == 0 %}
+                                    <div></div>
+                                {% elif day <= today.day and display_month == today.month and display_year == today.year %}
+                                    <div class="disabled">{{ day }}</div>
+                                {% elif day in booked_days %}
+                                    {% if day in user_booked_days %}
+                                        <div class="booked">{{ day }}</div>
+                                    {% else %}
+                                        <div class="unavailable">{{ day }}</div>
+                                    {% endif %}
+                                {% elif day >= next_day.day or display_month >= next_day.month or display_year >= next_day.year %}
+                                    <div class="available">{{ day }}</div>
+                                {% else %}
+                                    <div class="disabled">{{ day }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="events">
+                    <h2>Options</h2>
+
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                                <li class="{{ message.tags }}">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if user.is_authenticated %}
+
+                        <form id="dateRangeForm" method="post" action="{% url 'book_range' calendar_type 'start_date' 'end_date' %}">
+                            {% csrf_token %}
+                            <label class="first-date-text" for="start_date">Start Date:</label>
+                            <input class="first-date" type="date" id="start_date" name="start_date">
+                            <br>
+                            <label class="second-date-text" for="end_date">End Date:</label>
+                            <input class="second-date" type="date" id="end_date" name="end_date">
+                            <button class="book" type="button" onclick="submitDateRangeForm()">Book Now</button>
+                        </form>
+                        
+                        <form id="unbookAllForm" method="post" action="{% url 'unbook_all' calendar_type %}">
+                            {% csrf_token %}
+                            <button class="unbook" type="submit" onclick="unbookAll()">Unbook All</button>
+                        </form>
+
+                        {% if calendar_type == 'malibu' %}
+                            <form method="post" action="{% url 'confirm_all_bookings' 'malibu' %}">
+                                {% csrf_token %}
+                                <button class="confirm" type="submit">Confirm All Malibu Bookings</button>
+                            </form>
+                        {% elif calendar_type == 'zuma' %}
+                            <form method="post" action="{% url 'confirm_all_bookings' 'zuma' %}">
+                                {% csrf_token %}
+                                <button class="confirm" type="submit">Confirm All Zuma Bookings</button>
+                            </form>
+                        {% endif %}
+                    {% endif %}
+                    <ul>
+                        {% for event in events %}
+                            <li>{{ event.title }}: {{ event.start_time }} - {{ event.end_time }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="back">
+                        <a href="{% url 'home' %}">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".month").forEach(function(month) {
+                month.addEventListener('click', function() {
+                    const year = JSON.parse('{{ display_year|escapejs }}');
+                    const monthIndex = Array.from(this.parentNode.children).indexOf(this) + 1;
+
+                    if (year && monthIndex >= 1 && monthIndex <= 12) {
+                        const form = document.createElement('form');
+                        form.method = 'GET';
+                        form.action = `{% url 'calendar' calendar_type display_year 1 %}`.replace('1', monthIndex);
+                        document.body.appendChild(form);
+                        form.submit();
+                    } else {
+                        console.error("Invalid year or monthIndex. Year:", year, "Month Index:", monthIndex);
+                    }
+                });
+            });
+        });
+
+        function unbookAll() {
+            if (confirm("Are you sure you want to unbook all dates?")) {
+                document.getElementById('unbookAllForm').submit();
+            }
+        }
+
+        function submitDateRangeForm() {
+            const form = document.getElementById('dateRangeForm');
+            const startDate = form.start_date.value;
+            const endDate = form.end_date.value;
+
+            if (startDate && endDate) {
+                form.action = `/book_range/{{ calendar_type }}/${startDate}/${endDate}/`;
+                form.method = 'post';
+                form.submit();
+            } else {
+                alert('Please select both start and end dates.');
+            }
+        }
+
+    </script>
+</body>
+</html>

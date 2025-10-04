@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" href = "buy.css">
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+<title>Zuma</title>
+
+<body style="background-color:rgb(239, 239, 239);">
+<!--
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Packet Options</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Eco</a>
+    <a href="#">Normal</a>
+    <a href="#">First Class</a>
+  </div>
+  </div>
+  <div class = "buy">  
+    <a href = "#">
+      <button class = "buy-text">Buy</button>
+    </a>
+  </div>
+-->
+  <div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="images/Interior/renta-a-california-600-interior-1.jpg" alt="Image 1"></div>
+        <div class="slide"><img src="images/Interior/renta-a-california-600-interior-2.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="images/Interior/renta-a-california-600-interior-3.jpg" alt="Image 3"></div>
+        <div class="slide"><img src="images/Interior/renta-a-california-600-interior-4.jpg" alt="Image 4"></div>
+        <div class="slide"><img src="images/Interior/renta-a-california-600-interior-5.jpg" alt="Image 5"></div>
+        <div class="slide"><img src="images/Interior/renta-a-california-600-interior-6.jpg" alt="Image 6"></div>
+        <div class="slide"><img src="images/Interior/renta-a-california-600-interior-7.jpg" alt="Image 7"></div>
+        <div class="slide"><img src="images/Interior/renta-a-california-600-interior-8.jpg" alt="Image 8"></div>
+    </div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </div>
+
+  <div class="slider-e">
+    <div class="slides-e">
+        <div class="slide-e"><img src="images/Exterior/exterior5.jpg" alt="Image 1"></div>
+        <div class="slide-e"><img src="images/Exterior/exterior6.jpg" alt="Image 2"></div>
+        <div class="slide-e"><img src="images/Exterior/exterior7.jpg" alt="Image 3"></div>
+        <div class="slide-e"><img src="images/Exterior/exterior9.jpg" alt="Image 4"></div>
+        <div class="slide-e"><img src="images/Exterior/exterior10.jpg" alt="Image 5"></div>
+    </div>
+    <a class="prev-e" onclick="changeSlide_e(-1)">&#10094;</a>
+    <a class="next-e" onclick="changeSlide_e(1)">&#10095;</a>
+  </div>
+  
+  <p class = "interior">ИНТЕРИОР</p>
+  <p class = "exterior">ЕКСТЕРИОР</p>
+
+  <img src = "images/gc_edited.jpg" class = "bg-img">
+
+
+  <div class = "idk"></div>
+    <div class = "name-d">
+      <p class = "birth">ПРОИЗВЕДЕНИ:</p>
+      <p class = "day">ЮЛИ, 2024г.</p>
+    </div>
+
+    <!--Specifications-->
+    <img class = "vw" src = "images/Specifications/VW.png">
+    <p class = "vw-text">Grand <br> California 600</p>
+
+    <img class = "engine" src = "images/Specifications/иконка двигател.png">
+    <p class = "engine-text">2.0TDI, 177 к.с. <br> 130 кВт</p>
+
+    <img class = "shifter" src = "images/Specifications/иконка скорости.png">
+    <p class = "shifter-text">8-AT DSG  <br> автоматична <br> скоростна кутия</p>
+
+    <img class = "fuel" src = "images/Specifications/гориво.png">
+    <p class = "fuel-text">ДИЗЕЛ <br> 9.6 литра / 100 км</p>
+    <!---->
+
+    <!-- Header -->
+    <a class = "contacts">
+      <button>КОНТАКТИ</button>
+    </a>
+    <a class = "reserve">
+      <button>РЕЗЕРВАЦИИ</button>
+    </a>
+    <a class = "parking">
+      <button>ПАРКИНГ</button>
+    </a>
+    <a class = "how-to">
+      <button>КАК ДА НАЕМА</button>
+    </a>
+    <a class = "prices">
+      <button>ПЛАНОВЕ И ЦЕНИ</button>
+    </a>
+    
+    <div class = "logo-d">
+      <a href = "#">
+        <img src = "images/logo.png" class = "logo">
+      </a>
+    </div>
+    <!-- Header End-->
+
+
+    <img src = "images/Exterior/image1-removebg-preview.png" class = "gc">
+
+    <!--<div class = "fixed">
+      <a class = "calendar-a">
+        <button class = "calendar">Calendar</button>
+      </a>
+      <a class = "contact-a">
+        <button class = "contact">Contact Us</button>
+      </a>
+    </div>
+    -->
+
+    <p class = "safety">СИСТЕМИ ЗА БЕЗОПАСНОСТ</p>
+    <p class = "extras">ЕКСТРИ И КОМФОРТ</p>
+
+    <div class="image-slider">
+      <button class="prev-m" onclick="moveSlide(-1)">
+          <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      
+      <div class="slides-container">
+          <div class="slide-m">
+              <img src="images/Safety/Cross-wind-assist.jpg" alt="Image 1">
+              <div class = "title">Cross wind assist</div>
+              <div class="caption">Подпомага електронната
+                стабилизираща програма при силни
+                странични пориви на вятъра чрез
+                автоматична намеса в спирачките на
+                колелата.</div>
+          </div>
+          <div class="slide-m">
+              <img src="images/Safety/Front-Assist-City-Emergency-Braking-System.jpg" alt="Image 2">
+              <div class = "title">Font Assist &CEB</div>
+              <div class="caption">Система за разпознаване на критично ниска
+                дистанция с предупреждение при опасна ситуация и
+                при необходимост автоматично активиране на
+                аварийно спиране (при скорост до 30 км/час).
+              </div>
+          </div>
+          <div class="slide-m">
+              <img src="images/Safety/Front-Assist-City-Emergency-Braking-System.jpg" alt="Image 3">
+              <div class = "title">Adaptive Cruise Control</div>
+              <div class="caption">
+                Регулира автоматично скоростта според скоростта на
+                движещия се отпред автомобил и спазва при това
+                зададената от водача дистанция (при разстояние до 120 метра)
+              </div>
+          </div>
+          <div class="slide-m">
+              <img src="images/Safety/Lane-assist.jpg" alt="Image 4">
+              <div class = "title">Lane Assist</div>
+              <div class="caption">
+                Регулира автоматично скоростта според скоростта
+                на движещия се отпред автомобил и спазва при това
+                зададената от водача дистанция (при разстояние до 120 метра)
+              </div>
+          </div>
+          <div class="slide-m">
+              <img src="https://via.placeholder.com/1600x900/ff7f7f/333333?text=Image+5" alt="Image 5">
+              <div class = "title">Title</div>
+              <div class="caption">This is the caption for Image 5</div>
+          </div>
+          <div class="slide-m">
+              <img src="https://via.placeholder.com/1600x900/7f7fff/333333?text=Image+6" alt="Image 6">
+              <div class = "title">Title</div>
+              <div class="caption">This is the caption for Image 6</div>
+          </div>
+          <div class="slide-m">
+              <img src="https://via.placeholder.com/1600x900/7fff7f/333333?text=Image+7" alt="Image 7">
+              <div class = "title">Title</div>
+              <div class="caption">This is the caption for Image 7</div>
+          </div>
+          <div class="slide-m">
+              <img src="https://via.placeholder.com/1600x900/ffbf7f/333333?text=Image+8" alt="Image 8">
+              <div class = "title">Title</div>
+              <div class="caption">This is the caption for Image 8</div>
+          </div>
+      </div>
+      
+      <button class="next-m" onclick="moveSlide(1)">
+          <i class="fa-solid fa-chevron-right"></i>
+      </button>
+  </div>
+
+  <div class="image-slider-n">
+    <button class="prev-m" onclick="moveSlide_n(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    
+    <div class="slides-container-n">
+        <div class="slide-n">
+            <img src="images/Extras&Comfort/solaren-panel.jpg" alt="Image 1">
+            <div class = "title">Соларен панел 100W</div>
+            <div class="caption">За постоянно зареждане на батерията в жилищно<br>пространство.</div>
+        </div>
+        <div class="slide-n">
+            <img src="images/Extras&Comfort/led-farove.jpg" alt="Image 2">
+            <div class = "title">LED фарове</div>
+            <div class="caption">Автоматични дневни, къси и дълги LED светлини с<br>адаптивна функция.</div>
+        </div>
+        <div class="slide-n">
+            <img src="images/Extras&Comfort/tenta-thule.jpg" alt="Image 3">
+            <div class = "title">Тента THULE</div>
+            <div class="caption">Слънцезащитна сгъваема тента(250см х 300см)<br>
+              пред главния вход с включени допълнителни<br>
+              колани THULE за осигуряване срещу ветровито време.</div>
+        </div>
+        <div class="slide-n">
+            <img src="https://via.placeholder.com/1600x900/ffbf7f/333333?text=Image+4" alt="Image 4">
+            <div class = "title">Title</div>
+            <div class="caption">This is the caption for Image 4</div>
+        </div>
+        <div class="slide-n">
+            <img src="https://via.placeholder.com/1600x900/ff7f7f/333333?text=Image+5" alt="Image 5">
+            <div class = "title">Title</div>
+            <div class="caption">This is the caption for Image 5</div>
+        </div>
+        <div class="slide-n">
+            <img src="https://via.placeholder.com/1600x900/7f7fff/333333?text=Image+6" alt="Image 6">
+            <div class = "title">Title</div>
+            <div class="caption">This is the caption for Image 6</div>
+        </div>
+        <div class="slide-n">
+            <img src="https://via.placeholder.com/1600x900/7fff7f/333333?text=Image+7" alt="Image 7">
+            <div class = "title">Title</div>
+            <div class="caption">This is the caption for Image 7</div>
+        </div>
+        <div class="slide-n">
+            <img src="https://via.placeholder.com/1600x900/ffbf7f/333333?text=Image+8" alt="Image 8">
+            <div class = "title">Title</div>
+            <div class="caption">This is the caption for Image 8</div>
+        </div>
+    </div>
+    
+    <button class="next-m" onclick="moveSlide_n(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+<div class="container">
+  <h1>ПЛАНОВЕ ПОД НАЕМ</h1>
+  <div class="plans-wrapper">
+      <!-- Economical Plan -->
+      <div class="plan-card">
+          <img src="images/Exterior/image3.jpg" alt="Economical Plan">
+          <div class="plan-details">
+              <h2>ИКОНОМИЧЕН ПЛАН</h2>
+              <p class="price-r">Наемна цена:</p>
+              <div class = "price-d-e"></div>
+              <p class = "price">249</p>
+              <p class = "price-m">лв с ДДС / 24 часа</p>
+              <p class="description">Без скрити такси<br>Без такса почистване<br>Пробег до 200 км / 24 часа</p>
+              <button class="include-plan-button"><i class="fa-solid fa-angle-down"></i> ВКЛЮЧЕНИ В ТОЗИ ПЛАН</button>
+              <div class="hidden-content">
+                  <p>Двигател и технически характеристики:<br>
+                    - 2TDI / 177 hp/ 130kW / 410Nm дизелов дигател <br>
+                    - 8 степенна автоматична DSG скоростна кутия <br>
+                    - Смесен разход на гориво: 9.2 л/100 км <br>
+                    - Обем на резервоар (чиста вода): 110 литра <br>
+                    - Обем на резервоар (сива вода): 120 литра <br>
+                    - Максимум капацитет: 2-ма възрастни + 2 деца <br>
+                    <br>
+                                        КОМФОРТ:<br>
+                    
+                    - Навигационна тъч скрийн система с безжичен Apple Car Play и Android Auto с 8" сензорен дисплей, Streaming & Internet, Wired & Wireless App-Connect, гласово управление, 2
+                    USB-входа (type C), Bluetooth връзка за мобилен телефон, жабка със заключване и осветление и 4
+                    тонколони <br>
+                    - LED дневни и основни автоматични светлини <br>
+                    - 100W соларен панел, захранващ батерията за жилищното пространство <br>
+                    - Печка за отопление в цялото купе <br>
+                    - Климатична система в кабината на водача <br>
+                    - Хладилник с фризер <br>
+                    - Тента Thule над плъзгащата врата (250 см x 300 см) с включени колани за осигуряване <br>
+                    - Електрическа стъпенка под плъзгащата се врата <br>
+                    - Външна LED лента с настройка на яркостта над плъзгащата врата <br>
+                    - 2 газови котлона за готвене в кухнята <br>
+                    - Мивка в кухнята <br>
+                    - Баня със сгъваема мивка, душ и регулираща се тоалетна чиния <br>
+                    - Спалня за 2-ма възрастни с размери: 193 см. x 140 см. <br>
+                    - Детско легло с размери: <br>
+                    - LED осветление с настройка на яркостта в жилищното пространство <br>
+                    - LED амбиентно осветление с настройка на яркостта и избор от 4 цвята в спалното помещение <br>
+                    - 10 литра / цикъл топла вода <br>
+                    - Напълнени 2 бр. бутилки пропан - бутан (общо 56 литра) <br>
+                    - Множество контакти 220/240V в жилищното  пространство (могат да бъдат използвани само, когато кемперът е включен в електрическата мрежа)
+                    - Множество контакти 12V и USB-A в жилищното <br>
+                    пространство (могат да бъдат използвани независимо дали кемперът е включен в електрическата мрежа)
+                    - Система за индуктивно зареждане в нишата за телефони в нишата до пасажерите <br>
+                    - Кабел за зареждане в електрическата мрежа с дължина 20 метра <br>
+                    - Маркуч за зареждане на вода с дължина 15 метра <br>
+                    - Извод за външен душ, вкл. маркуч и душ
+                    в задната част на автомобила <br>
+                    - Маса в купето <br>
+                    - Посуда за хранене за 2-ма възрастни + 2 деца <br>
+                    - Спално бельо за 2-ма възрастни + 2 деца <br>
+                    - Хавлии, шампоан, душ гел, тоалетна хартия, препарат за тоалетна според времетраенето <br>
+                    - 2 бр. Нивелатори <br>
+                    - Централно заключване с дистанционно от спалното помещение управление, задействане отвътре, без                     SAFELOCK
+                  
+                                       <br> СИСТЕМИ ЗА БЕЗОПАСНОСТ
+                    <br>
+                    <br>
+                    - LED дневни и основни автоматични светлини <br>
+                    - Асистент за поддържане на лентата
+                    "Lane Assist" <br>
+                    - Камера за задно виждане <br>
+                    - Датчик с аларма в купето за сигнализация в случай на изтичане на газ <br>
+                    - Асистент за регулиране на дългите светлини "Light Assist", предни интервални чистачки със сензор за светлина и дъжд, дневни светлини с автоматична активация, функция "Leaving Home" и ръчна функция "Coming Home" <br>
+                    - Парк-пилот с предни и задни сензори <br>
+                    - Система за автоматичен контрол дистанцията ACC -Adaptive Cruise Control до 160 км/ч с функция "follow to stop", вкл. скоростоограничител <br>
+                    - Система за наблюдение на зоната пред автомобила "Front Assist" с функция за аварийно спиране в градски условия "City Emergency Braking System", при ACC <br> до 160 км/ч <br>
+                    - Асистент при потегляне по наклон <br>
+                    - Асистент при страничен вятър <br>
+                    - Електронна стабилизираща програма,
+                    спирачен асистент, ABS, ASR, EDL</p>
+              </div>
+              <button class="reserve-button-e">РЕЗЕРВИРАЙ СЕГА</button>
+          </div>
+      </div>
+      <!-- Standard Plan -->
+      <div class="plan-card">
+          <img src="images/Exterior/image3.jpg" alt="Standard Plan">
+          <div class="plan-details">
+              <h2>СТАНДАРТЕН ПЛАН</h2>
+              <p class="price-r">Наемна цена:</p>
+              <div class = "price-d-n"></div>
+              <p class = "price">279</p>
+              <p class = "price-m">лв с ДДС / 24 часа</p>
+              <p class="description">Без скрити такси<br>Без такса почистване<br>Пробег до 300 км / 24 часа</p>
+              <button class="include-plan-button"><i class="fa-solid fa-angle-down"></i> ВКЛЮЧЕНИ В ТОЗИ ПЛАН</button>
+              <div class="hidden-content">
+                  <p>Стандартен план: 
+                    <br>
+                    - Багажник THULE за 2 бр. велосипеди (велосопедите не са включени в този план) <br>
+                    - Сгъваема къмпинг маса за отвън <br>
+                    - 2 бр. сгъваеми къмпинг столове за отвън <br>
+                    - 2 бр. детски сгъваеми къмпинг столове за отвън <br>
+                    - Таблет Lenovo Tab 12 с писалка и със стойки в спалнята за възрастни и при седалките <br>
+                    - Подвижен USB вентилатор с LED лента и 3 степени на охлаждане <br>
+                    - Окабеляване в спалнята и другите помещения с USB-C (за повечето + iPhone 15) и USB-lightning (за iPhone 14 и надолу) <br>
+                    </p>
+              </div>
+              <button class="reserve-button-n">РЕЗЕРВИРАЙ СЕГА</button>
+          </div>
+      </div>
+      <!-- First Class Plan -->
+      <div class="plan-card">
+          <img src="images/Exterior/image3.jpg" alt="First Class Plan">
+          <div class="plan-details">
+              <h2>1-ВА КЛАСА</h2>
+              <p class="price-r">Наемна цена:</p>
+              <div class = "price-d-f"></div>
+              <p class = "price">299</p>
+              <p class = "price-m">лв с ДДС / 24 часа</p>
+              <p class="description">Без скрити такси<br>Без такса почистване<br>Неограничен пробег км</p>
+              <button class="include-plan-button"><i class="fa-solid fa-angle-down"></i> ВКЛЮЧЕНИ В ТОЗИ ПЛАН</button>
+              <div class="hidden-content">
+                  <p>First class: <br>
+                    - 2 бр. велосипеди за възрастни <br>
+                    - 2 бр. въдици за спининг с включени примамки <br>
+                    - Kъмпинг аксесоари, вкл. дърва за BBQ или брикети, сгъваемо BBQ, брадва, трион, кремък запалка (ако сте ентусиасти :-) <br>
+                    - Зареждане на хладилника с продукти по ваше желание (стойността на продуктите не е включена в плана, а се заплаща отделно)
+                  </p>
+              </div>
+              <button class="reserve-button-f">РЕЗЕРВИРАЙ СЕГА</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <p class = "reservations">* Ако желаете да направим резервация за къмпинг от Ваше име в България или чужбина,</p>
+  <p class = "reservations-u" onclick="window.location.href='#';">свържете се с нас</p> 
+  <p class = "reservations-i">(услугата по резервация не се заплаща, а е подарък от нас)</p>
+  <p class = "camping">* Ако се нуждаете от допълнителни продукти за къмпинг,</p>
+  <p class = "camping-u" onclick="window.location.href='#';">свържете се с нас</p>
+  <p class = "campingrocks" onclick="window.open('https://campingrocks.bg', '_blank');">CampingRocks</p>
+  <p class = "camping-i">(наш партньор е магазин</p>
+  <p class = "skoba">)</p>
+
+<img src = "images/size.png" class = "toshko">
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+<script src = "buy.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" href = "CSS/buy.css">
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+<title>Rent a California</title>
+<link rel="icon" href="Images/logo.png" type="image/x-icon">
+</head>
+
+<body style="background-color:rgb(239, 239, 239);">
+<!--
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Packet Options</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Eco</a>
+    <a href="#">Normal</a>
+    <a href="#">First Class</a>
+  </div>
+  </div>
+  <div class = "buy">
+    <a href = "#">
+      <button class = "buy-text">Buy</button>
+    </a>
+  </div>
+-->
+
+<div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="Images/Interior/renta-a-california-600-interior-1.jpg" alt="Image 1"></div>
+        <div class="slide"><img src="Images/Interior/renta-a-california-600-interior-2.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="Images/Interior/renta-a-california-600-interior-3.jpg" alt="Image 3"></div>
+        <div class="slide"><img src="Images/Interior/renta-a-california-600-interior-4.jpg" alt="Image 4"></div>
+        <div class="slide"><img src="Images/Interior/renta-a-california-600-interior-5.jpg" alt="Image 5"></div>
+        <div class="slide"><img src="Images/Interior/renta-a-california-600-interior-6.jpg" alt="Image 6"></div>
+        <div class="slide"><img src="Images/Interior/renta-a-california-600-interior-7.jpg" alt="Image 7"></div>
+        <div class="slide"><img src="Images/Interior/renta-a-california-600-interior-8.jpg" alt="Image 8"></div>
+    </div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </div>
+
+  <div class="slider-e">
+    <div class="slides-e">
+        <div class="slide-e"><img src="Images/Exterior/exterior5.jpg" alt="Image 1"></div>
+        <div class="slide-e"><img src="Images/Exterior/exterior6.jpg" alt="Image 2"></div>
+        <div class="slide-e"><img src="Images/Exterior/exterior7.jpg" alt="Image 3"></div>
+        <div class="slide-e"><img src="Images/Exterior/exterior9.jpg" alt="Image 4"></div>
+        <div class="slide-e"><img src="Images/Exterior/exterior10.jpg" alt="Image 5"></div>
+    </div>
+    <a class="prev-e" onclick="changeSlide_e(-1)">&#10094;</a>
+    <a class="next-e" onclick="changeSlide_e(1)">&#10095;</a>
+  </div>
+
+  <p class = "interior">ИНТЕРИОР</p>
+  <p class = "exterior">ЕКСТЕРИОР</p>
+
+  <img src = "Images/gc_edited.jpg" class = "bg-img">
+
+
+  <div class = "name-d">
+    <!--Specifications-->
+    <img class = "vw" src = "Images/Specifications/VW.png">
+    <p class = "vw-text">Grand <br> California 600 <br> Произведени: <br> ЮЛИ, 2024г.</p>
+
+    <img class = "engine" src = "Images/Specifications/иконка двигател.png">
+    <p class = "engine-text">2.0TDI, 177 к.с. <br> 130 кВт</p>
+
+    <img class = "shifter" src = "Images/Specifications/иконка скорости.png">
+    <p class = "shifter-text">8-AT DSG  <br> автоматична <br> скоростна кутия</p>
+
+    <img class = "fuel" src = "Images/Specifications/гориво.png">
+    <p class = "fuel-text">ДИЗЕЛ <br> 9.6 литра / 100 км</p>
+    <!---->
+  </div>
+
+    <!-- Header -->
+    <div class = "logo-d">
+      <a href = "">
+        <img src = "Images/logo.png" class = "logo">
+      </a>
+    </div>
+    <p class = "contacts" onclick="window.location.href='contacts.html';">КОНТАКТИ</p>
+    <p class = "reserve" onclick="window.location.href='#';">РЕЗЕРВAЦИИ</p>
+    <p class = "parking" onclick="window.location.href='parking.html';">ПАРКИНГ</p>
+    <p class = "how-to" id="scrollButton2">ВЪПРОСИ</p>
+    <p class = "prices" id="scrollButton1">ПЛАНОВЕ И ЦЕНИ</p>
+
+    <nav class="mobile-menu" id="mobile-menu">
+      <div class="menu-header">
+          <span>Меню</span>
+          <span class="close-menu" id="close-menu">✖</span>
+      </div>
+      <ul>
+          <li><a href="contacts.html">Контакти</a></li>
+          <li><a href="#">Резервации</a></li>
+          <li><a href="parking.html">Паркинг</a></li>
+          <li><a href="#">Как да наема?</a></li>
+          <li><a href="#">Планове и цени</a></li>
+          <!-- Add more buttons if needed -->
+      </ul>
+  
+      <!-- Button for "Условия за наемане" -->
+      <div class="bottom-button">
+          <button id="terms-button">Условия за наемане</button>
+      </div>
+  
+      <div class="contact-info">
+          <p>📞 +359 895 697 835</p>
+      </div>
+  </nav>
+  
+  <div class="menu-trigger" id="menu-trigger">
+      <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <div class="menu-text" id="menu-text">Меню</div>
+  </div>
+    <!-- Header End-->
+
+
+    <img src = "Images/Exterior/image1-removebg-preview.png" class = "gc">
+
+    <p class = "safety">СИСТЕМИ ЗА БЕЗОПАСНОСТ</p>
+    <p class = "extras">ЕКСТРИ И КОМФОРТ</p>
+
+
+
+    <div class="image-slider">
+      <button class="prev-m" onclick="moveSlide(-1)">
+          <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      
+      <div class="slides-container">
+          <div class="slide-m">
+              <img src="Images/Safety/Cross-wind-assist.jpg" alt="Image 1">
+              <div class = "title">Cross wind assist</div>
+              <div class="caption">Подпомага електронната
+                стабилизираща програма при силни
+                странични пориви на вятъра чрез
+                автоматична намеса в спирачките на
+                колелата.</div>
+          </div>
+          <div class="slide-m">
+              <img src="Images/Safety/Front-Assist-City-Emergency-Braking-System.jpg" alt="Image 2">
+              <div class = "title">Font Assist &CEB</div>
+              <div class="caption">Система за разпознаване на критично ниска
+                дистанция с предупреждение при опасна ситуация и
+                при необходимост автоматично активиране на
+                аварийно спиране (при скорост до 30 км/час).
+              </div>
+          </div>
+          <div class="slide-m">
+              <img src="Images/Safety/Front-Assist-City-Emergency-Braking-System.jpg" alt="Image 3">
+              <div class = "title">Adaptive Cruise Control</div>
+              <div class="caption">
+                Регулира автоматично скоростта според скоростта на
+                движещия се отпред автомобил и спазва при това
+                зададената от водача дистанция (при разстояние до 120 метра)
+              </div>
+          </div>
+          <div class="slide-m">
+              <img src="Images/Safety/Lane-assist.jpg" alt="Image 4">
+              <div class = "title">Lane Assist</div>
+              <div class="caption">
+                Регулира автоматично скоростта според скоростта
+                на движещия се отпред автомобил и спазва при това
+                зададената от водача дистанция (при разстояние до 120 метра)
+              </div>
+          </div>
+          <div class="slide-m">
+              <img src="https://via.placeholder.com/1600x900/ff7f7f/333333?text=Image+5" alt="Image 5">
+              <div class = "title">Title</div>
+              <div class="caption">This is the caption for Image 5</div>
+          </div>
+          <div class="slide-m">
+              <img src="https://via.placeholder.com/1600x900/7f7fff/333333?text=Image+6" alt="Image 6">
+              <div class = "title">Title</div>
+              <div class="caption">This is the caption for Image 6</div>
+          </div>
+          <div class="slide-m">
+              <img src="https://via.placeholder.com/1600x900/7fff7f/333333?text=Image+7" alt="Image 7">
+              <div class = "title">Title</div>
+              <div class="caption">This is the caption for Image 7</div>
+          </div>
+          <div class="slide-m">
+              <img src="https://via.placeholder.com/1600x900/ffbf7f/333333?text=Image+8" alt="Image 8">
+              <div class = "title">Title</div>
+              <div class="caption">This is the caption for Image 8</div>
+          </div>
+      </div>
+      
+      <button class="next-m" onclick="moveSlide(1)">
+          <i class="fa-solid fa-chevron-right"></i>
+      </button>
+  </div>
+
+  <div class="image-slider-n">
+    <button class="prev-m" onclick="moveSlide_n(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    
+    <div class="slides-container-n">
+        <div class="slide-n">
+            <img src="Images/Extras&Comfort/solaren-panel.jpg" alt="Image 1">
+            <div class = "title">Соларен панел 100W</div>
+            <div class="caption">За постоянно зареждане на батерията в жилищно<br>пространство.</div>
+        </div>
+        <div class="slide-n">
+            <img src="Images/Extras&Comfort/led-farove.jpg" alt="Image 2">
+            <div class = "title">LED фарове</div>
+            <div class="caption">Автоматични дневни, къси и дълги LED светлини с<br>адаптивна функция.</div>
+        </div>
+        <div class="slide-n">
+            <img src="Images/Extras&Comfort/tenta-thule.jpg" alt="Image 3">
+            <div class = "title">Тента THULE</div>
+            <div class="caption">Слънцезащитна сгъваема тента(250см х 300см)<br>
+              пред главния вход с включени допълнителни<br>
+              колани THULE за осигуряване срещу ветровито време.</div>
+        </div>
+        <div class="slide-n">
+            <img src="https://via.placeholder.com/1600x900/ffbf7f/333333?text=Image+4" alt="Image 4">
+            <div class = "title">Title</div>
+            <div class="caption">This is the caption for Image 4</div>
+        </div>
+        <div class="slide-n">
+            <img src="https://via.placeholder.com/1600x900/ff7f7f/333333?text=Image+5" alt="Image 5">
+            <div class = "title">Title</div>
+            <div class="caption">This is the caption for Image 5</div>
+        </div>
+        <div class="slide-n">
+            <img src="https://via.placeholder.com/1600x900/7f7fff/333333?text=Image+6" alt="Image 6">
+            <div class = "title">Title</div>
+            <div class="caption">This is the caption for Image 6</div>
+        </div>
+        <div class="slide-n">
+            <img src="https://via.placeholder.com/1600x900/7fff7f/333333?text=Image+7" alt="Image 7">
+            <div class = "title">Title</div>
+            <div class="caption">This is the caption for Image 7</div>
+        </div>
+        <div class="slide-n">
+            <img src="https://via.placeholder.com/1600x900/ffbf7f/333333?text=Image+8" alt="Image 8">
+            <div class = "title">Title</div>
+            <div class="caption">This is the caption for Image 8</div>
+        </div>
+    </div>
+    
+    <button class="next-m" onclick="moveSlide_n(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+
+<div class="container">
+  <section id="section1">
+    <h1>ПЛАНОВЕ ПОД НАЕМ</h1>
+  </section>
+  <div class="plans-wrapper">
+
+      <div class="plan-card">
+          <img src="Images/Exterior/image3.jpg" alt="Economical Plan">
+          <div class="plan-details">
+              <h2>ИКОНОМИЧЕН ПЛАН</h2>
+              <p class="price-r">Наемна цена:</p>
+              <div class = "price-d-e"></div>
+              <p class = "price">249</p>
+              <p class = "price-m">лв с ДДС / 24 часа</p>
+              <p class="description">Без скрити такси<br>Без такса почистване<br>Пробег до 200 км / 24 часа</p>
+              <button class="include-plan-button"><i class="fa-solid fa-angle-down"></i> ВКЛЮЧЕНИ В ТОЗИ ПЛАН</button>
+              <div class="hidden-content">
+                  <p>Двигател и технически характеристики:<br>
+                    - 2TDI / 177 hp/ 130kW / 410Nm дизелов дигател <br>
+                    - 8 степенна автоматична DSG скоростна кутия <br>
+                    - Смесен разход на гориво: 9.2 л/100 км <br>
+                    - Обем на резервоар (чиста вода): 110 литра <br>
+                    - Обем на резервоар (сива вода): 120 литра <br>
+                    - Максимум капацитет: 2-ма възрастни + 2 деца <br>
+                    <br>
+                                        КОМФОРТ:<br>
+                    
+                    - Навигационна тъч скрийн система с безжичен Apple Car Play и Android Auto с 8" сензорен дисплей, Streaming & Internet, Wired & Wireless App-Connect, гласово управление, 2
+                    USB-входа (type C), Bluetooth връзка за мобилен телефон, жабка със заключване и осветление и 4
+                    тонколони <br>
+                    - LED дневни и основни автоматични светлини <br>
+                    - 100W соларен панел, захранващ батерията за жилищното пространство <br>
+                    - Печка за отопление в цялото купе <br>
+                    - Климатична система в кабината на водача <br>
+                    - Хладилник с фризер <br>
+                    - Тента Thule над плъзгащата врата (250 см x 300 см) с включени колани за осигуряване <br>
+                    - Електрическа стъпенка под плъзгащата се врата <br>
+                    - Външна LED лента с настройка на яркостта над плъзгащата врата <br>
+                    - 2 газови котлона за готвене в кухнята <br>
+                    - Мивка в кухнята <br>
+                    - Баня със сгъваема мивка, душ и регулираща се тоалетна чиния <br>
+                    - Спалня за 2-ма възрастни с размери: 193 см. x 140 см. <br>
+                    - Детско легло с размери: <br>
+                    - LED осветление с настройка на яркостта в жилищното пространство <br>
+                    - LED амбиентно осветление с настройка на яркостта и избор от 4 цвята в спалното помещение <br>
+                    - 10 литра / цикъл топла вода <br>
+                    - Напълнени 2 бр. бутилки пропан - бутан (общо 56 литра) <br>
+                    - Множество контакти 220/240V в жилищното  пространство (могат да бъдат използвани само, когато кемперът е включен в електрическата мрежа)
+                    - Множество контакти 12V и USB-A в жилищното <br>
+                    пространство (могат да бъдат използвани независимо дали кемперът е включен в електрическата мрежа)
+                    - Система за индуктивно зареждане в нишата за телефони в нишата до пасажерите <br>
+                    - Кабел за зареждане в електрическата мрежа с дължина 20 метра <br>
+                    - Маркуч за зареждане на вода с дължина 15 метра <br>
+                    - Извод за външен душ, вкл. маркуч и душ
+                    в задната част на автомобила <br>
+                    - Маса в купето <br>
+                    - Посуда за хранене за 2-ма възрастни + 2 деца <br>
+                    - Спално бельо за 2-ма възрастни + 2 деца <br>
+                    - Хавлии, шампоан, душ гел, тоалетна хартия, препарат за тоалетна според времетраенето <br>
+                    - 2 бр. Нивелатори <br>
+                    - Централно заключване с дистанционно от спалното помещение управление, задействане отвътре, без                     SAFELOCK
+                  
+                                       <br> СИСТЕМИ ЗА БЕЗОПАСНОСТ
+                    <br>
+                    <br>
+                    - LED дневни и основни автоматични светлини <br>
+                    - Асистент за поддържане на лентата
+                    "Lane Assist" <br>
+                    - Камера за задно виждане <br>
+                    - Датчик с аларма в купето за сигнализация в случай на изтичане на газ <br>
+                    - Асистент за регулиране на дългите светлини "Light Assist", предни интервални чистачки със сензор за светлина и дъжд, дневни светлини с автоматична активация, функция "Leaving Home" и ръчна функция "Coming Home" <br>
+                    - Парк-пилот с предни и задни сензори <br>
+                    - Система за автоматичен контрол дистанцията ACC -Adaptive Cruise Control до 160 км/ч с функция "follow to stop", вкл. скоростоограничител <br>
+                    - Система за наблюдение на зоната пред автомобила "Front Assist" с функция за аварийно спиране в градски условия "City Emergency Braking System", при ACC <br> до 160 км/ч <br>
+                    - Асистент при потегляне по наклон <br>
+                    - Асистент при страничен вятър <br>
+                    - Електронна стабилизираща програма,
+                    спирачен асистент, ABS, ASR, EDL</p>
+              </div>
+              <button class="reserve-button-e">РЕЗЕРВИРАЙ СЕГА</button>
+          </div>
+      </div>
+
+      <div class="plan-card">
+          <img src="Images/Exterior/image3.jpg" alt="Standard Plan">
+          <div class="plan-details">
+              <h2>СТАНДАРТЕН ПЛАН</h2>
+              <p class="price-r">Наемна цена:</p>
+              <div class = "price-d-n"></div>
+              <p class = "price">279</p>
+              <p class = "price-m">лв с ДДС / 24 часа</p>
+              <p class="description">Без скрити такси<br>Без такса почистване<br>Пробег до 300 км / 24 часа</p>
+              <button class="include-plan-button"><i class="fa-solid fa-angle-down"></i> ВКЛЮЧЕНИ В ТОЗИ ПЛАН</button>
+              <div class="hidden-content">
+                  <p>Стандартен план: 
+                    <br>
+                    - Багажник THULE за 2 бр. велосипеди (велосопедите не са включени в този план) <br>
+                    - Сгъваема къмпинг маса за отвън <br>
+                    - 2 бр. сгъваеми къмпинг столове за отвън <br>
+                    - 2 бр. детски сгъваеми къмпинг столове за отвън <br>
+                    - Таблет Lenovo Tab 12 с писалка и със стойки в спалнята за възрастни и при седалките <br>
+                    - Подвижен USB вентилатор с LED лента и 3 степени на охлаждане <br>
+                    - Окабеляване в спалнята и другите помещения с USB-C (за повечето + iPhone 15) и USB-lightning (за iPhone 14 и надолу) <br>
+                    </p>
+              </div>
+              <button class="reserve-button-n">РЕЗЕРВИРАЙ СЕГА</button>
+          </div>
+      </div>
+
+      <div class="plan-card">
+          <img src="Images/Exterior/image3.jpg" alt="First Class Plan">
+          <div class="plan-details">
+              <h2>1-ВА КЛАСА</h2>
+              <p class="price-r">Наемна цена:</p>
+              <div class = "price-d-f"></div>
+              <p class = "price">299</p>
+              <p class = "price-m">лв с ДДС / 24 часа</p>
+              <p class="description">Без скрити такси<br>Без такса почистване<br>Неограничен пробег км</p>
+              <button class="include-plan-button"><i class="fa-solid fa-angle-down"></i> ВКЛЮЧЕНИ В ТОЗИ ПЛАН</button>
+              <div class="hidden-content">
+                  <p>First class: <br>
+                    - 2 бр. велосипеди за възрастни <br>
+                    - 2 бр. въдици за спининг с включени примамки <br>
+                    - Kъмпинг аксесоари, вкл. дърва за BBQ или брикети, сгъваемо BBQ, брадва, трион, кремък запалка (ако сте ентусиасти :-) <br>
+                    - Зареждане на хладилника с продукти по ваше желание (стойността на продуктите не е включена в плана, а се заплаща отделно)
+                  </p>
+              </div>
+              <button class="reserve-button-f">РЕЗЕРВИРАЙ СЕГА</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+  
+  <p class = "reservations">* Ако желаете да направим резервация за къмпинг от Ваше име в България или чужбина,</p>
+  <p class = "reservations-u" onclick="window.location.href='#';">свържете се с нас</p> 
+  <p class = "reservations-i">(услугата по резервация не се заплаща, а е подарък от нас)</p>
+  <p class = "camping">* Ако се нуждаете от допълнителни продукти за къмпинг,</p>
+  <p class = "camping-u" onclick="window.location.href='#';">свържете се с нас</p>
+  <p class = "campingrocks" onclick="window.open('https://campingrocks.bg', '_blank');">CampingRocks</p>
+  <p class = "camping-i">(наш партньор е магазин</p>
+  <p class = "skoba">)</p>
+
+  <img src = "Images/size.png" class = "toshko">
+
+
+<div class="faq">
+  <section id="section2">
+    <h1 class="header-faq">ВЪПРОСИ И ОТГОВОРИ</h1>
+  </section>
+    <div class="faq-item">
+      <div class="faq-question text-primary">Веднага ли трябва да платя след резервация?</div>
+      <div class="faq-answer text-primary">В рамките на 24 часа от успешно направена устна по телефон или чрез платформата
+        резервация кандидат - Наемателят следва да сключи Договор за наем на избраното
+        МПС за заявения наемен период, както и да заплати капаро по Договора в размер на
+        до 50 % от Общата наемна цена за наемния период</div>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question text-primary">Как мога да платя резервацията?</div>
+      <div class="faq-answer text-primary">Остатъка о от сумата по резервацията се плаща в брой при получаване на наетото
+        МПС  или авансово по банков път на НАЕМОДАТЕЛЯ. Плащането по банков път се
+        извършва по следната банкова сметка: BG84UNCR70001525748515 - лева , банка
+        “УниКредит Булбанк” АД</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question text-primary">Мога ли да върна кемпера по-рано от предвиденото и да получа компенсация за
+      това?</div>
+    <div class="faq-answer text-primary">Кемперът може да се върне по-рано, но компенсация не се изплаща, освен ако не е по-
+      вина на Наемодателя или при възникнла невъзможност за ползване на наетото
+      МПС(повреда или форсмажорни обстоятелства, за които Наемателят няма вина).</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question text-primary">В какъв срок мога да анулирам резервацията си без да дължа неустойка?</div>
+  <div class="faq-answer text-primary">Ако Наемателят се откаже в срок до 5 дни от датата на резервацията се възстановява
+    целято капаро на Наемателя, ако се откаже след това платената сума не се
+    възстановява.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question text-primary">Каква е сумата на депозита и в кои случаи се правят удръжки от него?</div>
+  <div class="faq-answer text-primary">НАЕМАТЕЛЯТ дължи депозит в размер на 1200 /хиляда и двеста лева/, който служи за
+    покриване на евентуални щети върху наетото МПС или върху предоставеното с него
+    оборудване, възникнали по време на наемния период, както и за възстановяване на
+    консумативи или покриване на разходи, свързани с използването му (в т.ч. гориво и
+    др.). Депозитът се връща при връщане на моторното превозно средство в изправност и
+    заредено с пълен резервоар гориво, както и при наличие на цялото оборудване,
+    описано в приемо-предавателния протокол при предаване на наетото МПС.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question text-primary">Ако искам да наема кемпера за weekend, т.е. да го взема от петък вечер и
+    да го върна неделя вечер, ще ме таксувате за 2 или 3 дни?</div>
+  <div class="faq-answer text-primary">Таксата за наемане на кемпер Grand California e за 24 часа. Ако се вземе в
+    17:00 часа в петък и се върне до 17:00 часа в неделя се таксуват 2 дни (48
+    часа).</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question text-primary">Мога ли да наема кемпера за пътуване извън България?</div>
+  <div class="faq-answer text-primary">Да, изготвя се нотариално заверено пълномощно , с което може да пътувате в
+    Европа с изключение на някой държави като Русия, Албания, Босна, Украйна,
+    Беларус , Молдова.</div>
+</div>
+</div>
+
+  <!-- ADD MORE QUESTIONS IF NEEDED -->
+<!--
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <div class="footer-section benefit">
+                <h2 data-lang="communityBenefitsTitle">Join Our Community and Enjoy Exclusive Benefits!</h2>
+                <p data-lang="communityBenefitsText">Create an account today and unlock a world of exciting features and benefits designed just for you. Click here to see what exciting things are waiting for you!</p>
+                <div class="circle" onclick="toggleBenefits(this)">
+                    <span>...</span>
+                </div>
+                <ul class="benefits-list">
+                    <li data-lang="benefit1"><strong>Exclusive Discounts:</strong> Save more with special offers and member-only discounts.</li>
+                    <li data-lang="benefit2"><strong>Priority Support:</strong> Get fast and dedicated assistance from our support team.</li>
+                    <li data-lang="benefit3"><strong>Early Access:</strong> Be the first to know about our latest updates and new products.</li>
+                    <li data-lang="benefit4"><strong>Personalized Experience:</strong> Enjoy tailored recommendations and a customized experience.</li>
+                    <li data-lang="benefit5"><strong>Community Access:</strong> Connect with other members and share your experiences.</li>
+                </ul>
+                <a href="" class="btn benefit btn-primary btn-lg mt-3" data-lang="joinCommunity">Join Our Community</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <div class="footer-section contact">
+                <h2 data-lang="contactsTitle">Contacts & Addresses</h2>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><span data-lang="address"> гр. София, "Околовръстен път" 353, 1138</span></p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><span data-lang="phone"> +359 895 6978 35</span></p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i><span data-lang="email"> rentacalifornia.bg@gmail.com</span></p>
+            </div>
+        </div>
+        <div class="footer-column">
+            <div class="footer-section">
+                <div class="quick">
+                    <ul>
+                        <li><a href="#" data-lang="home">Home</a></li>
+                        <li><a href="#" data-lang="aboutUs">About Us</a></li>
+                        <li><a href="#" data-lang="services">Services</a></li>
+                        <li><a href="#" data-lang="contactUs">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="follow-us">
+                    <h2 data-lang="followUsTitle">Follow Us</h2>
+                    <a class="btn btn-social twitter" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-social facebook" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-social youtube" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-social in" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="legal">
+                    <ul>
+                        <li><a href="" data-lang="privacyPolicy">Privacy Policy</a></li>
+                        <li><a href="" data-lang="termsOfService">Terms of Service</a></li>
+                        <li><a href="" data-lang="cookies">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>&copy; 2024 Rent a California Camper. All rights reserved.</p>
+  </footer>
+-->
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+<script src = "JavaScript/buy.js"></script>
+
+</body>
+</html>

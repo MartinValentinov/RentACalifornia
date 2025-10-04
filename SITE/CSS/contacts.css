@@ -1,0 +1,249 @@
+body {
+    background-color: rgb(239, 239, 239);
+    font-family: 'Roboto';
+}
+
+/* Header */
+
+.logo {
+    position: absolute;
+    top: -15%;
+    left: 5%;
+    height: auto;
+    width: 90%;
+    cursor: pointer;
+  }
+  
+  .logo-d {
+    position: absolute;
+    top: 6%;
+    left: 32%;
+    width: 100px;
+    height: 70px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 30px;
+  }
+
+.contacts, .reserve, .parking, .how-to, .prices {
+    display: none;
+  }
+  
+  @media (min-width: 769px)
+  {
+
+    .logo {
+        position: absolute;
+        top: -15%;
+        left: 5%;
+        height: auto;
+        width: 90%;
+        cursor: pointer;
+      }
+      
+      .logo-d {
+        position: absolute;
+        top: 5%;
+        left: 41.5%;
+        width: 250px;
+        height: 150px;
+        background-color: rgb(239, 239, 239);
+        border-radius: 30px;
+      }
+    
+
+    .contacts, .reserve, .parking, .how-to, .prices {
+      display: inline-block;
+    }
+  
+    .contacts {
+      position: absolute;
+      top: 2%;
+      right: 87%;
+      background-color: #f1f1f1;
+      border: none;
+      font-size: 18px;
+      font-family: 'Roboto';
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .reserve {
+      position: absolute;
+      top: 2%;
+      right: 74%;
+      background-color: #f1f1f1;
+      border: none;
+      font-size: 18px;
+      font-family: 'Roboto';
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .parking {
+      position: absolute;
+      top: 2%;
+      right: 63%;
+      background-color: #f1f1f1;
+      border: none;
+      font-size: 18px;
+      font-family: 'Roboto';
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .how-to {
+      position: absolute;
+      top: 2%;
+      right: 27%;
+      background-color: #f1f1f1;
+      border: none;
+      font-size: 18px;
+      font-family: 'Roboto';
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .prices {
+      position: absolute;
+      top: 2%;
+      right: 12%;
+      background-color: #f1f1f1;
+      border: none;
+      font-size: 18px;
+      font-family: 'Roboto';
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+  }
+  .menu-trigger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 10000;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .menu-text {
+    display: none;  /* Initially hidden */
+    margin-left: 10px;
+    font-size: 18px;
+    color: black;
+    padding: 0;
+    border: none;
+  }
+  
+  /* Hamburger button styling */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+  }
+  
+  /* Mobile menu */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    transition: left 0.3s ease;
+    padding: 20px;
+    z-index: 9999;
+  }
+  
+  .mobile-menu.active {
+    left: 0;
+  }
+  
+  /* Hide menu trigger when menu is active */
+  .mobile-menu.active ~ .menu-trigger {
+    display: none;
+  }
+  
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menu-header .close-menu {
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .mobile-menu ul {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+  
+  .mobile-menu ul li {
+    margin-bottom: 15px;
+  }
+  
+  .mobile-menu ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Centered button styling */
+  #terms-button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 250px; /* Adjusted margin */
+    margin-left: 20px;
+  }
+  
+  .contact-info {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -20px;
+  }
+  
+  /* Hide on Desktop */
+  @media (min-width: 769px) {
+    .menu-header, .menu-trigger, .menu-text, .hamburger, .mobile-menu, .close-menu, .bottom-button, .contact-info
+    {
+      display: none;
+    }
+    
+  }
+  
+  body {
+    width: 100%;
+  }
+  
+/* Header End */
+
+
+.phone-number {
+    margin-top: 300px;
+    margin-left: 50px;
+}

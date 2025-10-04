@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a California Camper</title>
+    {% load static %}
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <h2 class="left-word" data-lang="contacts">Contacts</h2>
+            <h2 data-lang="reservations">Reservations</h2>
+            <h2 data-lang="parking">Parking</h2>
+            <div class="nav-image">
+                {% load static %}
+                <img src="{% static 'images/logo.png' %}" alt="Logo">
+            </div>
+            <h2 data-lang="howToRent">How to Rent?</h2>
+            <h2 data-lang="plansAndPrices">Plans & Prices</h2>
+            <h2 onclick="toggleLanguage()" id="language-toggle">ENG</h2> 
+            <div class="translate">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                    <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+                    <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+                </svg>
+            </div>   
+        </div>
+    </nav>
+    <div class="bef-faq">
+        <div class="main-class">
+            {% load static %}
+            <img src="{% static 'images/image.png' %}" alt="bg-image">
+            <div class="rent">
+                <h2 data-lang="rentTitle">Rent Grand California 600</h2>
+                <p data-lang="noHiddenFees">No hidden fees! No cleaning fee!</p>
+                <p data-lang="rentFullDay">Rent for a full 24 hours!</p>
+                <div class="when">
+                    <ion-icon name="calendar" size="large" style="margin: 9px 12px;"></ion-icon>
+                    <p class="begin-when" data-lang="start">Start</p>
+                    <p class="travel-when" data-lang="departure">When is departure</p>
+                    <i class="bi bi-arrow-right"></i>
+                    <p class="end-when" data-lang="end">End</p>
+                    <p class="return-when" data-lang="return">When is return</p>
+                </div>
+                <button class="search">
+                    <i class="bi bi-search"></i>
+                    <p class="search-text" data-lang="search">Search</p>
+                </button>
+            </div>
+        </div>
+        <div class="welcome">
+            <p class="title" data-lang="welcomeTitle">Welcome Aboard the VW Grand California 600</p>
+            <p class="fun-way" data-lang="funWay">Maybe the easiest and most fun camper to drive</p>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div class="faq">
+        <h1 class="header" data-lang="faqTitle">Questions and Answers</h1>
+        <div class="faq-item">
+            <div class="faq-question text-primary" data-lang="faqQuestion1">Question 1</div>
+            <div class="faq-answer text-primary" data-lang="faqAnswer1">Answer to question 1</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question text-primary" data-lang="faqQuestion2">Question 2</div>
+            <div class="faq-answer text-primary" data-lang="faqAnswer2">Answer to question 2</div>
+        </div>
+        <!-- Add more FAQ items as needed -->
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-section benefit">
+                    <h2 data-lang="communityBenefitsTitle">Join Our Community and Enjoy Exclusive Benefits!</h2>
+                    <p data-lang="communityBenefitsText">Create an account today and unlock a world of exciting features and benefits designed just for you. Click here to see what exciting things are waiting for you!</p>
+                    <div class="circle" onclick="toggleBenefits(this)">
+                        <span>...</span>
+                    </div>
+                    <ul class="benefits-list">
+                        <li data-lang="benefit1"><strong>Exclusive Discounts:</strong> Save more with special offers and member-only discounts.</li>
+                        <li data-lang="benefit2"><strong>Priority Support:</strong> Get fast and dedicated assistance from our support team.</li>
+                        <li data-lang="benefit3"><strong>Early Access:</strong> Be the first to know about our latest updates and new products.</li>
+                        <li data-lang="benefit4"><strong>Personalized Experience:</strong> Enjoy tailored recommendations and a customized experience.</li>
+                        <li data-lang="benefit5"><strong>Community Access:</strong> Connect with other members and share your experiences.</li>
+                    </ul>
+                    <a href="" class="btn benefit btn-primary btn-lg mt-3" data-lang="joinCommunity">Join Our Community</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-section contact">
+                    <h2 data-lang="contactsTitle">Contacts & Addresses</h2>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><span data-lang="address">Somewhere in Sofia</span></p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><span data-lang="phone">+012 345 67890</span></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><span data-lang="email">info@example.com</span></p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-section">
+                    <div class="quick">
+                        <ul>
+                            <li><a href="#" data-lang="home">Home</a></li>
+                            <li><a href="#" data-lang="aboutUs">About Us</a></li>
+                            <li><a href="#" data-lang="services">Services</a></li>
+                            <li><a href="#" data-lang="contactUs">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="follow-us">
+                        <h2 data-lang="followUsTitle">Follow Us</h2>
+                        <a class="btn btn-social twitter" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-social facebook" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-social youtube" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-social in" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="legal">
+                        <ul>
+                            <li><a href="" data-lang="privacyPolicy">Privacy Policy</a></li>
+                            <li><a href="" data-lang="termsOfService">Terms of Service</a></li>
+                            <li><a href="" data-lang="cookies">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 Rent a California Camper. All rights reserved.</p>
+    </footer>
+
+    {% load static %}
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script src="{% static 'scripts/script.js' %}"></script>
+</body>
+</html>
